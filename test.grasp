@@ -1,0 +1,152 @@
+#Tip: To observe deadline miss for task1, set arrival time of task2 before task1
+#Priority: ['task1', 'task2', 'task3'] = [2, 1, 3]
+#Threshold: ['task1', 'task2', 'task3'] = [3, 2, 3]
+newTask task1 -name "task1" -arrivalColor blue -arrivalStem dotted -deadlineColor red -deadlineStem dotted -color red
+newTask task2 -name "task2" -arrivalColor blue -arrivalStem dotted -deadlineColor green -deadlineStem dotted -color green
+newTask task3 -name "task3" -arrivalColor blue -arrivalStem dotted -deadlineColor green -deadlineStem dotted -color green
+newServer server1 -name "Stack Size (Efficiency = 40.0 percent)" -capacity 16.0 -budget 16.0
+plot 0 jobArrived job1.1 task1
+plot 0 jobArrived job2.1 task2
+plot 0 jobArrived job3.1 task3
+plot 0 jobResumed job3.1
+plot 0 serverDepleted server1
+plot 0 serverReplenished server1 10.0
+plot 5.0 jobCompleted job3.1
+plot 5.0 jobResumed job1.1
+plot 5.0 serverDepleted server1
+plot 5.0 serverReplenished server1 4.0
+plot 6.0 jobDeadline job1.1 -arrowColor orange -arrowStem dotted
+plot 7.0 jobCompleted job1.1
+plot 7.0 jobResumed job2.1
+plot 7.0 serverDepleted server1
+plot 7.0 serverReplenished server1 6.0
+plot 8.0 jobDeadline job2.1 -arrowColor orange -arrowStem dotted
+plot 9.0 jobArrived job1.2 task1
+plot 9.0 jobDeadline job2.1 -arrowColor orange -arrowStem dotted
+plot 10.0 jobArrived job3.2 task3
+plot 10.0 jobCompleted job2.1
+plot 10.0 jobResumed job3.2
+plot 10.0 serverDepleted server1
+plot 10.0 serverReplenished server1 10.0
+plot 15.0 jobArrived job2.2 task2
+plot 15.0 jobCompleted job3.2
+plot 15.0 jobResumed job1.2
+plot 15.0 jobDeadline job1.2 -arrowColor orange -arrowStem dotted
+plot 15.0 serverDepleted server1
+plot 15.0 serverReplenished server1 4.0
+plot 16.0 jobDeadline job1.2 -arrowColor orange -arrowStem dotted
+plot 17.0 jobCompleted job1.2
+plot 17.0 jobResumed job2.2
+plot 17.0 serverDepleted server1
+plot 17.0 serverReplenished server1 6.0
+plot 18.0 jobArrived job1.3 task1
+plot 20.0 jobArrived job3.3 task3
+plot 20.0 jobCompleted job2.2
+plot 20.0 jobResumed job3.3
+plot 20.0 serverDepleted server1
+plot 20.0 serverReplenished server1 10.0
+plot 24.0 jobDeadline job1.3 -arrowColor orange -arrowStem dotted
+plot 25.0 jobCompleted job3.3
+plot 25.0 jobResumed job1.3
+plot 25.0 jobDeadline job1.3 -arrowColor orange -arrowStem dotted
+plot 25.0 serverDepleted server1
+plot 25.0 serverReplenished server1 4.0
+plot 26.0 jobDeadline job1.3 -arrowColor red -arrowStem solid
+plot 27.0 jobArrived job1.4 task1
+plot 27.0 jobCompleted job1.3
+plot 27.0 jobResumed job1.4
+plot 29.0 jobCompleted job1.4
+plot 29.0 serverDepleted server1
+plot 29.0 serverReplenished server1 0.0
+plot 30.0 jobArrived job2.3 task2
+plot 30.0 jobArrived job3.4 task3
+plot 30.0 jobResumed job3.4
+plot 30.0 serverDepleted server1
+plot 30.0 serverReplenished server1 10.0
+plot 35.0 jobCompleted job3.4
+plot 35.0 jobResumed job2.3
+plot 35.0 serverDepleted server1
+plot 35.0 serverReplenished server1 6.0
+plot 36.0 jobArrived job1.5 task1
+plot 38.0 jobCompleted job2.3
+plot 38.0 jobResumed job1.5
+plot 38.0 serverDepleted server1
+plot 38.0 serverReplenished server1 4.0
+plot 40.0 jobArrived job3.5 task3
+plot 40.0 jobCompleted job1.5
+plot 40.0 jobResumed job3.5
+plot 40.0 serverDepleted server1
+plot 40.0 serverReplenished server1 10.0
+plot 45.0 jobArrived job1.6 task1
+plot 45.0 jobArrived job2.4 task2
+plot 45.0 jobCompleted job3.5
+plot 45.0 jobResumed job1.6
+plot 45.0 serverDepleted server1
+plot 45.0 serverReplenished server1 4.0
+plot 47.0 jobCompleted job1.6
+plot 47.0 jobResumed job2.4
+plot 47.0 serverDepleted server1
+plot 47.0 serverReplenished server1 6.0
+plot 50.0 jobArrived job3.6 task3
+plot 50.0 jobCompleted job2.4
+plot 50.0 jobResumed job3.6
+plot 50.0 serverDepleted server1
+plot 50.0 serverReplenished server1 10.0
+plot 54.0 jobArrived job1.7 task1
+plot 55.0 jobCompleted job3.6
+plot 55.0 jobResumed job1.7
+plot 55.0 serverDepleted server1
+plot 55.0 serverReplenished server1 4.0
+plot 57.0 jobCompleted job1.7
+plot 57.0 serverDepleted server1
+plot 57.0 serverReplenished server1 0.0
+plot 60.0 jobArrived job2.5 task2
+plot 60.0 jobArrived job3.7 task3
+plot 60.0 jobResumed job3.7
+plot 60.0 serverDepleted server1
+plot 60.0 serverReplenished server1 10.0
+plot 63.0 jobArrived job1.8 task1
+plot 65.0 jobCompleted job3.7
+plot 65.0 jobResumed job1.8
+plot 65.0 serverDepleted server1
+plot 65.0 serverReplenished server1 4.0
+plot 67.0 jobCompleted job1.8
+plot 67.0 jobResumed job2.5
+plot 67.0 serverDepleted server1
+plot 67.0 serverReplenished server1 6.0
+plot 68.0 jobDeadline job2.5 -arrowColor orange -arrowStem dotted
+plot 69.0 jobDeadline job2.5 -arrowColor orange -arrowStem dotted
+plot 70.0 jobArrived job3.8 task3
+plot 70.0 jobCompleted job2.5
+plot 70.0 jobResumed job3.8
+plot 70.0 serverDepleted server1
+plot 70.0 serverReplenished server1 10.0
+plot 72.0 jobArrived job1.9 task1
+plot 75.0 jobArrived job2.6 task2
+plot 75.0 jobCompleted job3.8
+plot 75.0 jobResumed job1.9
+plot 75.0 serverDepleted server1
+plot 75.0 serverReplenished server1 4.0
+plot 77.0 jobCompleted job1.9
+plot 77.0 jobResumed job2.6
+plot 77.0 serverDepleted server1
+plot 77.0 serverReplenished server1 6.0
+plot 80.0 jobArrived job3.9 task3
+plot 80.0 jobCompleted job2.6
+plot 80.0 jobResumed job3.9
+plot 80.0 serverDepleted server1
+plot 80.0 serverReplenished server1 10.0
+plot 81.0 jobArrived job1.10 task1
+plot 85.0 jobCompleted job3.9
+plot 85.0 jobResumed job1.10
+plot 85.0 serverDepleted server1
+plot 85.0 serverReplenished server1 4.0
+plot 87.0 jobCompleted job1.10
+plot 87.0 serverDepleted server1
+plot 87.0 serverReplenished server1 0.0
+plot 90.0 jobArrived job1.11 task1
+plot 90.0 jobArrived job2.7 task2
+plot 90.0 jobArrived job3.10 task3
+plot 90.0 jobResumed job3.10
+plot 90.0 serverDepleted server1
+plot 90.0 serverReplenished server1 10.0
