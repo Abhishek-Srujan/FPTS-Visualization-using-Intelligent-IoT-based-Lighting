@@ -1,4 +1,4 @@
-In this project, the folder "Frontend" is implementation of our first Webserver and the folder "RestServer" represents the second WebServer. The Python code "Algo.py" is the implementation of the scheduling algorithm that produces the grasp trace.
+In this project, the folder "Frontend" is implementation of the first Webserver and the folder "RestServer" represents the second WebServer. The Python code "Algo.py" is the implementation of the scheduling algorithm that produces the grasp trace.
 
 -> Frontend
 This folder implements the front end of the GRASP - HUE system. The main objective of this code is to
